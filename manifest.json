@@ -1,0 +1,137 @@
+{
+    "id": "forum",
+    "name": "Forum",
+    "authors": ["nivcoo", "KraftInk"],
+    "license": "MIT",
+    "description": "forum::messages.package_description",
+    "market": {
+        "name": "forum::market.name",
+        "author": {
+            "name": "nivcoo, KraftInk",
+            "url": "https://github.com/kraftink-cms"
+        },
+        "description": "forum::market.description"
+    },
+    "type": "plugin",
+    "games": {
+        "supported": ["*"]
+    },
+    "version": "1.0.0",
+    "namespace": "KraftInk\\Plugins\\Forum\\",
+    "provider": "KraftInk\\Plugins\\Forum\\Providers\\PluginServiceProvider",
+    "privacy": "KraftInk\\Plugins\\Forum\\Services\\Privacy",
+    "permissions": {
+        "forum.view": {
+            "label": "forum::messages.permission_view",
+            "default": {
+                "visitor": true,
+                "member": true
+            }
+        },
+        "forum.manage": {
+            "label": "forum::messages.admin_title",
+            "default": {
+                "admin": true
+            }
+        },
+        "forum.moderate": {
+            "label": "forum::admin.permissions.permission_moderate",
+            "default": {
+                "mod": true,
+                "admin": true
+            }
+        },
+        "forum.purge": {
+            "label": "forum::admin.permissions.permission_purge",
+            "default": {
+                "admin": true
+            }
+        },
+        "forum.tags": {
+            "label": "forum::admin.permissions.permission_tags",
+            "default": {
+                "mod": true,
+                "admin": true
+            }
+        },
+        "forum.bypass-lock": {
+            "label": "forum::admin.permissions.permission_locked",
+            "default": {
+                "mod": true,
+                "admin": true
+            }
+        }
+    },
+    "navigation": {
+        "public": [
+            {
+                "label": "forum::messages.discussions.title",
+                "permission": "forum.view",
+                "route": "plugins.forum.public.home.index"
+            }
+        ],
+        "admin": [
+            {
+                "label": "forum::messages.discussions.title",
+                "section": "community",
+                "icon": "chat-left-text",
+                "id": "forum",
+                "parent": "extensions",
+                "children": [
+                    {
+                        "label": "forum::messages.discussions.categories",
+                        "icon": "folder",
+                        "route": "plugins.forum.admin.categories.index",
+                        "permissions": ["forum.manage"]
+                    },
+                    {
+                        "label": "forum::messages.discussions.topics",
+                        "icon": "chat-square-text",
+                        "route": "plugins.forum.admin.topics.index",
+                        "permissions": ["forum.manage", "forum.moderate"]
+                    },
+                    {
+                        "label": "forum::admin.moderation.moderation",
+                        "icon": "shield-check",
+                        "route": "plugins.forum.admin.reports.index",
+                        "permissions": ["forum.manage", "forum.moderate"]
+                    },
+                    {
+                        "label": "forum::admin.tags.tags",
+                        "icon": "tags",
+                        "route": "plugins.forum.admin.tags.index",
+                        "permissions": ["forum.manage", "forum.tags"]
+                    },
+                    {
+                        "icon": "discord",
+                        "permission": "forum.manage",
+                        "route": "plugins.forum.admin.announcements.index",
+                        "label": "forum::admin.announcements.title"
+                    }
+                ],
+                "position": 300
+            }
+        ],
+        "footer": []
+    },
+    "imports": {
+        "kraftink": ["forum__"],
+        "azuriom": ["forum_"],
+        "mineweb": ["forum_"]
+    },
+    "requires": {
+        "php": "^8.4.1",
+        "cms": ">=0.0.1"
+    },
+    "configuration": {
+        "route": "plugins.forum.admin.categories.index",
+        "permission": "forum.manage"
+    },
+    "uninstall": {
+        "settings": ["forum.", "secret.forum."],
+        "storage": ["forum/attachments"]
+    },
+    "assets": {
+        "scripts": ["js/forum.js", "js/drafts.js"]
+    }
+}
