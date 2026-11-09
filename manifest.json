@@ -5,6 +5,11 @@
     "license": "MIT",
     "description": "forum::messages.package_description",
     "market": {
+        "readme": {
+            "en": "lang/en/market.md",
+            "fr": "lang/fr/market.md"
+        },
+        "icon": "chat-square-text",
         "name": "forum::market.name",
         "author": {
             "name": "nivcoo, KraftInk",

@@ -2,5 +2,5 @@
 
 return [
     'name' => 'Forum',
-    'description' => 'Offrez un espace de discussion à vos membres, avec catégories, sondages, suivis et outils de modération.',
+    'description' => 'Créez un forum avec des discussions, des sondages et des espaces réservés aux membres.',
 ];
