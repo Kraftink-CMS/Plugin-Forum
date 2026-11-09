@@ -5,6 +5,11 @@
     "license": "MIT",
     "description": "forum::messages.package_description",
     "market": {
+        "readme": {
+            "en": "lang/en/market.md",
+            "fr": "lang/fr/market.md"
+        },
+        "icon": "chat-square-text",
         "name": "forum::market.name",
         "author": {
             "name": "nivcoo, KraftInk",
@@ -16,7 +21,7 @@
     "games": {
         "supported": ["*"]
     },
-    "version": "1.0.0",
+    "version": "1.0.1",
     "namespace": "KraftInk\\Plugins\\Forum\\",
     "provider": "KraftInk\\Plugins\\Forum\\Providers\\PluginServiceProvider",
     "privacy": "KraftInk\\Plugins\\Forum\\Services\\Privacy",

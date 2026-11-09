@@ -2,5 +2,5 @@
 
 return [
     'name' => 'Forum',
-    'description' => 'Give your members a place to discuss, with categories, polls, subscriptions and moderation tools.',
+    'description' => 'Set up a forum with discussions, polls and members-only spaces.',
 ];
