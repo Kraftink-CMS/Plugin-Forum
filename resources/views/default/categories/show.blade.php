@@ -20,8 +20,8 @@
             <div class="list-group mb-4">
                 @foreach ($children as $child)
                     <a class="list-group-item list-group-item-action py-3"
-                        href="{{ route('plugins.forum.public.categories.show', $child->id) }}"><i
-                            class="bi bi-{{ $child->icon }} me-2" aria-hidden="true"></i>{{ $child->name }}</a>
+                        href="{{ route('plugins.forum.public.categories.show', $child->id) }}">
+                        <x-content-icon :name="$child->icon" class="me-2" />{{ $child->name }}</a>
                 @endforeach
             </div>
         @endif

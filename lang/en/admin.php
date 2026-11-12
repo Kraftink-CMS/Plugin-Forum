@@ -127,7 +127,7 @@ return [
         'category_locked' => 'Close this category to new posts',
         'private_topics' => 'Members can only see discussions they started',
         'private_help' => 'Moderators allowed to read this area can see every discussion.',
-        'icon' => 'Bootstrap icon',
+        'icon' => 'Icon',
         'default_tags' => 'Default tags',
     ],
     'tags' => [

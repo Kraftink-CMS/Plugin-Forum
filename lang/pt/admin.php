@@ -127,7 +127,7 @@ return [
         'category_locked' => 'Bloquear esta categoria para novas mensagens',
         'private_topics' => 'Os membros só podem ver as discussões que iniciaram',
         'private_help' => 'Os moderadores com acesso de leitura a este espaço podem ver todas as discussões.',
-        'icon' => 'Ícone do Bootstrap',
+        'icon' => 'Ícone',
         'default_tags' => 'Etiquetas predefinidas',
     ],
     'tags' => [

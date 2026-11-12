@@ -5,7 +5,7 @@
                 <div class="d-flex align-items-start gap-3">
                     <span
                         class="forum-category-icon d-inline-flex align-items-center justify-content-center rounded bg-primary-subtle text-primary p-3">
-                        <i class="bi bi-{{ $category->icon }} fs-5" aria-hidden="true"></i>
+                        <x-content-icon :name="$category->icon" class="fs-5" />
                     </span>
                     <div>
                         <h2 class="h5 mb-1"><a class="text-decoration-none"

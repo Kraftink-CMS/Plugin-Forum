@@ -127,7 +127,7 @@ return [
         'category_locked' => 'Cerrar esta categoría a nuevas publicaciones',
         'private_topics' => 'Los miembros solo pueden ver los debates que han iniciado',
         'private_help' => 'Los moderadores con acceso de lectura a este espacio pueden ver todos los debates.',
-        'icon' => 'Icono de Bootstrap',
+        'icon' => 'Icono',
         'default_tags' => 'Etiquetas predeterminadas',
     ],
     'tags' => [

@@ -44,9 +44,8 @@
             min="0" max="10000" value="{{ $value('position', $record?->position ?? 0) }}" required>
     </div>
     <div class="col-md-3">
-        <label class="form-label" for="category-icon-{{ $key }}">{{ __('forum::admin.categories.icon') }}</label>
-        <input class="form-control" id="category-icon-{{ $key }}" name="icon" maxlength="60"
-            value="{{ $value('icon', $record?->icon ?? 'chat-left-text') }}">
+        <x-admin::icon-picker :id="'category-icon-' . $key" name="icon" :label="__('forum::admin.categories.icon')"
+            :value="$value('icon', $record?->icon ?? 'chat-left-text')" />
     </div>
     @foreach (['read' => ['public', 'members', 'roles'], 'write' => ['members', 'roles', 'none']] as $ability => $choices)
         <fieldset class="col-md-6">

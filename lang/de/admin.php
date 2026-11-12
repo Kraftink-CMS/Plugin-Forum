@@ -127,7 +127,7 @@ return [
         'category_locked' => 'Diese Kategorie für neue Beiträge sperren',
         'private_topics' => 'Mitglieder sehen nur selbst gestartete Diskussionen',
         'private_help' => 'Moderatoren mit Leserecht für diesen Bereich können alle Diskussionen sehen.',
-        'icon' => 'Bootstrap-Symbol',
+        'icon' => 'Symbol',
         'default_tags' => 'Standard-Schlagwörter',
     ],
     'tags' => [
