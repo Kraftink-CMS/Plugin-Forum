@@ -21,12 +21,7 @@
                 @foreach ($children as $child)
                     <a class="list-group-item list-group-item-action py-3"
                         href="{{ route('plugins.forum.public.categories.show', $child->id) }}">
-                        @if (class_exists(\App\Kraft\ContentIcons::class))
-                            <x-dynamic-component component="content-icon" :name="$child->icon" class="me-2" />
-                        @else
-                            <i class="bi bi-{{ $child->icon }} me-2" aria-hidden="true"></i>
-                        @endif
-                        {{ $child->name }}</a>
+                        <x-content-icon :name="$child->icon" class="me-2" />{{ $child->name }}</a>
                 @endforeach
             </div>
         @endif

@@ -139,13 +139,7 @@
                     <tbody>
                         @forelse($categories as $category)
                             <tr>
-                                <td>
-                                    @if (class_exists(\App\Kraft\ContentIcons::class))
-                                        <x-dynamic-component component="content-icon" :name="$category->icon" class="me-2" />
-                                    @else
-                                        <i class="bi bi-{{ $category->icon }} me-2" aria-hidden="true"></i>
-                                    @endif
-                                    {{ $category->name }}
+                                <td><x-content-icon :name="$category->icon" class="me-2" />{{ $category->name }}
                                     @if ($category->locked)
                                         <span
                                             class="badge text-bg-secondary ms-2">{{ __('forum::messages.discussions.locked') }}</span>
