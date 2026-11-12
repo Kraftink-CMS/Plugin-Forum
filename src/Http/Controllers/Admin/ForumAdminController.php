@@ -115,7 +115,7 @@ class ForumAdminController
             'write_roles.*' => 'integer|distinct|exists:roles,id',
             'default_tags' => 'nullable|array|max:5',
             'default_tags.*' => 'integer|distinct|exists:forum__tags,id',
-            'icon' => ['nullable', 'regex:/^[a-z0-9]+(?:-[a-z0-9]+)*$/D', 'max:60'],
+            'icon' => ['nullable', 'string', 'max:60', 'regex:/^[a-z0-9][a-z0-9-]*$/D'],
             'locked' => 'sometimes|boolean',
             'private_topics' => 'sometimes|boolean',
             'replace_legacy_access' => 'sometimes|boolean',

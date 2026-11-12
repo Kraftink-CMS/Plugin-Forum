@@ -127,7 +127,7 @@ return [
         'category_locked' => 'Fermer la catégorie aux publications',
         'private_topics' => 'Chaque membre voit uniquement ses propres discussions',
         'private_help' => 'Les modérateurs autorisés à lire cet espace peuvent voir toutes les discussions.',
-        'icon' => 'Icône Bootstrap',
+        'icon' => 'Icône',
         'default_tags' => 'Étiquettes proposées par défaut',
     ],
     'tags' => [

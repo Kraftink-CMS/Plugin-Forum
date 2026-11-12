@@ -5,7 +5,11 @@
                 <div class="d-flex align-items-start gap-3">
                     <span
                         class="forum-category-icon d-inline-flex align-items-center justify-content-center rounded bg-primary-subtle text-primary p-3">
-                        <i class="bi bi-{{ $category->icon }} fs-5" aria-hidden="true"></i>
+                        @if (class_exists(\App\Kraft\ContentIcons::class))
+                            <x-dynamic-component component="content-icon" :name="$category->icon" class="fs-5" />
+                        @else
+                            <i class="bi bi-{{ $category->icon }} fs-5" aria-hidden="true"></i>
+                        @endif
                     </span>
                     <div>
                         <h2 class="h5 mb-1"><a class="text-decoration-none"
